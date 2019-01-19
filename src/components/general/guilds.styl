@@ -210,7 +210,8 @@
 
   // Hide
   background-color: transparent
-  transition: background-color .25s ease
+  border: 1px solid transparent
+  transition: background-color .25s ease, border-color .25s ease
   pointer-events: none
 
   &:hover
@@ -219,8 +220,10 @@
 
     .theme-dark &
       background-color: $theme-dark
+      border-color: $theme-dark-outline
     .theme-light &
       background-color: $theme-light
+      border-color: $theme-light-outline
 
   > *:not(.avatarSmall-3ACRaI)
     transition: opacity .25s ease
