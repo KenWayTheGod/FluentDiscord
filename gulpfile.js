@@ -40,3 +40,12 @@ gulp.task('build:theme', () => gulp.src(`src/${main}`)
   .pipe(gulp.dest('dist')))
 
 gulp.task('watch:theme', () => gulp.watch(`src/**/**`, gulp.series('build:theme')))
+
+gulp.task('build:import', () => gulp.src(`src/import.styl`)
+  .pipe(stylus())
+  .pipe(insert.prepend(metaHeader))
+  .pipe(rename((path) => { path.basename = `${config.name}.theme` })) // eslint-disable-line brace-style
+  .pipe(eol('\r\n', true))
+  .pipe(gulp.dest('dist')))
+
+gulp.task('watch:import', () => gulp.watch('src/import.styl', gulp.series('build:import')))
