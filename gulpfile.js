@@ -28,7 +28,7 @@ const meta = {
 const metaHeader = `/*//META${JSON.stringify(meta)}*//**/\r\n`
 
 const current = new Date()
-const commitHash = require('child_process')
+const commitHash = () => require('child_process')
   .execSync('git rev-parse HEAD')
   .toString().trim().slice(0, 6)
 
@@ -38,7 +38,7 @@ gulp.task('build:theme', () => gulp.src(`src/${main}`)
   .pipe(stylus({ define: { currentDate: `${current.getDay()}/${current.getMonth()}` } }))
   .pipe(postcss(postcssPlugins))
   .pipe(insert.prepend(metaHeader))
-  .pipe(insert.append(`\r\n/* version ${commitHash} */`))
+  .pipe(insert.append(`\r\n/* version ${commitHash()} */`))
   .pipe(rename((path) => { path.basename = `import` })) // eslint-disable-line brace-style
   .pipe(eol('\r\n', true))
   .pipe(sourcemap.write('.'))
@@ -49,7 +49,7 @@ gulp.task('watch:theme', () => gulp.watch(`src/**/**`, gulp.series('build:theme'
 gulp.task('build:import', () => gulp.src(`src/import.styl`)
   .pipe(stylus())
   .pipe(insert.prepend(metaHeader))
-  .pipe(replace('import.css', `import.css?v=${commitHash}`))
+  .pipe(replace('import.css', `import.css?v=${commitHash()}`))
   .pipe(rename((path) => { path.basename = `${config.name}.theme` })) // eslint-disable-line brace-style
   .pipe(eol('\r\n', true))
   .pipe(gulp.dest('dist')))
