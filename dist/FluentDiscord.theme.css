@@ -156,6 +156,38 @@ textarea {
 ::placeholder {
   font-family: 'Segoe UI', 'Meiryo', 'MS PGothic', 'MS Mincho', 'Malgun Gothic', 'Yu Gothic', 'Segoe UI Emoji', 'Segoe MDL2 Assets' !important;
 }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .appMount-3lHmkl {
   background-color: transparent;
 }
@@ -423,7 +455,8 @@ body::before {
   left: 48px;
   z-index: 5;
   background-color: transparent;
-  transition: background-color 0.25s ease;
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
   pointer-events: none;
 }
 .theme-dark .container-2Thooq:not(.powercord-spotify),
@@ -436,9 +469,11 @@ body::before {
 }
 .theme-dark .container-2Thooq:not(.powercord-spotify):hover {
   background-color: #141414;
+  border-color: #767676;
 }
 .theme-light .container-2Thooq:not(.powercord-spotify):hover {
   background-color: #e6e6e6;
+  border-color: #8a8a8a;
 }
 .container-2Thooq:not(.powercord-spotify) > *:not(.avatarSmall-3ACRaI) {
   transition: opacity 0.25s ease;
@@ -644,6 +679,65 @@ body::before {
 }
 .button-1w5pas {
   display: none;
+}
+.popoutBottom-1YbShG.noArrow-3BYQ0Z[style*='overflow: hidden;'] {
+  box-shadow: 0 0;
+  -webkit-transform: none !important;
+          transform: none !important;
+  height: auto !important;
+  width: auto !important;
+  overflow: visible !important;
+  margin-top: 8px;
+  left: 56px !important;
+}
+.menu-Sp6bN1 {
+  -webkit-animation: fade-in 0.25s ease;
+          animation: fade-in 0.25s ease;
+  width: 224px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+.theme-dark .menu-Sp6bN1 {
+  background-color: #141414;
+  box-shadow: 0 0;
+  border-color: #767676;
+}
+.theme-light .menu-Sp6bN1 {
+  background-color: #e6e6e6;
+  box-shadow: 0 0;
+  border-color: #8a8a8a;
+}
+.item-1GzJrl {
+  cursor: default;
+}
+.theme-dark .item-1GzJrl:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+.theme-light .item-1GzJrl:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+.theme-dark .item-1GzJrl:active {
+  background-color: rgba(255,255,255,0.2);
+}
+.theme-light .item-1GzJrl:active {
+  background-color: rgba(0,0,0,0.2);
+}
+.popoutTopLeft-b5Eb3O.noArrow-3BYQ0Z[style*='overflow: hidden;'] {
+  box-shadow: 0 0;
+  -webkit-transform: none !important;
+          transform: none !important;
+  height: auto !important;
+  width: auto !important;
+  margin-top: 0;
+  margin-bottom: 8px;
+  top: unset !important;
+  left: 48px !important;
+  bottom: -100vh;
+  overflow: visible !important;
+}
+.menu-Sp6bN1.alt-3btY0e {
+  width: 232px;
 }
 
 /*# sourceMappingURL=FluentDiscord.theme.css.map */
