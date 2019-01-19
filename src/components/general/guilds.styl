@@ -192,7 +192,7 @@
 
 
 // Account bar
-.container-2Thooq
+.container-2Thooq:not(.powercord-spotify)
   display: flex;
   flex-direction: column
   align-items: flex-start
@@ -203,6 +203,7 @@
   position: absolute
   bottom: $guilds-separator
   left: $guilds-width
+  z-index: 5
 
   .theme-dark &, .theme-light &
     background-color: transparent
