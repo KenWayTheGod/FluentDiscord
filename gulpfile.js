@@ -56,5 +56,5 @@ gulp.task('build:import', () => gulp.src(`src/import.styl`)
 
 gulp.task('watch:import', () => gulp.watch('src/import.styl', gulp.series('build:import')))
 
-gulp.task('watch', () => gulp.watch('src/**/**', gulp.series('build:theme', 'build:import')))
+gulp.task('watch', () => gulp.watch('src/**/**', gulp.parallel('build:theme', 'build:import')))
 gulp.task('build', gulp.parallel('build:theme', 'build:import'))
