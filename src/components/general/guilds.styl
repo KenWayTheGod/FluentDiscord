@@ -1,0 +1,374 @@
+.guildsWrapper-5TJh6A
+  .theme-dark &, .theme-light &
+    background-color: transparent
+  width: 48px
+  border-radius: 0
+  position: relative
+  overflow: visible
+  z-index: 1
+
+  &:before
+    background-image: var(--int-bg-image)
+    background-attachment: fixed
+    filter: brightness(var(--int-bg-opacity)) blur(10px)
+    pointer-events: none
+    content: ''
+    height: 100%
+    width: calc(100% + 240px)
+    padding: 10px
+    position: absolute
+    z-index: -1
+
+  &::after
+    background-image: var(--int-res-noise)
+    pointer-events: none
+    content: ''
+    height: 100%
+    width: calc(100% + 240px)
+    position: absolute
+    z-index: -1
+
+
+// Scrollers
+.scrollerWrap-1IAIlv
+  background-color: rgba(#000, .15)
+  width: 100%
+
+.guilds-1q_RqH
+  margin-bottom: $guilds-height + $guilds-separator * 2
+  padding: 0
+
+  &::-webkit-scrollbar
+    display: none
+
+
+// Online friends count and guild separator
+.friendsOnline-_wi_fM
+  display: none
+
+.guildSeparator-1X4GQ1
+  display: none
+
+
+// Direct Messages
+.dms-rcsEnV
+  margin-top: 0
+  margin-bottom: $guilds-separator
+
+
+// Guild
+.guild-1EfMGQ
+  height: $guilds-height
+  width: $guilds-width
+
+  & + &
+    margin-top: 0
+
+  &:hover
+    background-color: $theme-dark-hover
+  &:active
+    background-color: $theme-dark-active
+
+  // Placeholder
+  &.guildPlaceholder-1ioaid
+    background-color: transparent
+    display: flex
+    align-items: center
+    justify-content: center
+    border: 0
+    border-radius: 0
+
+    &::after
+      background-color: $theme-dark-active
+      content: ''
+      height: $guilds-height - (13 * 2)
+      width: $guilds-width - (13 * 2)
+      margin: 13px
+      border-radius: 50%
+
+  // Unread and selected indicator
+  &::before
+    background-color: transparent
+    transform: translateY(-50%) !important
+    transition: none !important
+    opacity: 1 !important
+    content: ''
+    display: block !important
+    height: 0% !important
+    width: 5px !important
+    margin-top: 0 !important
+    border-radius: 0 !important
+    position: absolute !important
+    top: 50% !important
+    left: 0 !important
+
+  &.unread-qLkInr::before
+    background-color: #fff !important
+    opacity: .35 !important
+    height: 25% !important
+
+  &.selected-ML3OIq::before
+    background-color: var(--int-accent-color) !important
+    opacity: 1 !important
+    height: 50% !important
+
+  // Add guilds button
+  &.guildsAdd-21_IdK
+    background-color: transparent
+    cursor: default
+    border: 0
+    border-radius: 0
+
+    &::before, .guildsAddInner-1KMFy-
+      display: none
+
+    &::after
+      fluent-icon: ''
+      color: #fff
+
+.guild-1EfMGQ .guildInner-3DSoA4
+  background-color: transparent !important
+  height: $guilds-height
+  width: $guilds-width
+  border-radius: 0 !important
+
+  a
+    cursor: default
+    height: 100%
+    width: 100%
+
+  // Discord Home
+  a[draggable='false']:not([user]):not([channel])
+    &::before
+      fluent-icon: ''
+
+    svg
+      display: none
+
+  .iconSizeLarge-161qtT, .inner-1V3pNb
+    background-size: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+    width: 100%
+
+    &::after
+      background-image: inherit
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
+      content: ''
+      display: block
+      height: 24px
+      width: 24px
+      border-radius: 50%
+      overflow: hidden
+
+  .noIcon-1a_FrS
+    for num in (10...20)
+      &[style={'"' + 'font-size: ' + num + 'px;' + '"'}]
+        font-size: num * 0.8px !important
+
+    &::after
+        display: none
+
+  .avatar-S_nsxk
+    height: 100%
+    width: 100%
+
+// Mention badge
+.badge-1GsMF2
+  font-size: 0
+  pointer-events: none
+  height: 10px
+  width: 10px
+  padding: 0
+  border-radius: 50%
+  position: absolute
+  bottom: 20%
+  right: 20%
+
+
+// Account bar
+.container-2Thooq
+  display: flex;
+  flex-direction: column
+  align-items: flex-start
+  height: auto
+  width: $channels-width - 9px * 3
+  margin: 0
+  padding: 0
+  position: absolute
+  bottom: $guilds-separator
+  left: $guilds-width
+
+  .theme-dark &, .theme-light &
+    background-color: transparent
+
+  // Hide
+  background-color: transparent
+  pointer-events: none
+
+  &:hover
+    pointer-events: all
+
+    .theme-dark &
+      background-color: $theme-dark
+    .theme-light &
+      background-color: $theme-light
+
+  > *:not(.avatarSmall-3ACRaI)
+    display: none !important
+
+  &:hover > *:not(.avatarSmall-3ACRaI)
+    display: flex !important
+
+  // Avatar
+  .avatarSmall-3ACRaI
+    opacity: 1 !important
+    cursor: default
+    pointer-events: all
+    height: $guilds-height
+    width: $guilds-width
+    margin-right: unset
+    border-radius: 0
+    overflow: hidden
+    position: fixed
+    bottom: $guilds-separator
+    left: 0
+
+    &:hover
+      background-color: $theme-dark-hover
+    &:active
+      background-color: $theme-dark-active
+
+    .status-2zcSVk
+      height: 10px
+      width: 10px
+      border-radius: 50%
+      position: absolute
+      bottom: 20%
+      right: 20%
+
+      .theme-dark &, .theme-light &
+        border: 0
+
+    .inner-1W0Bkn
+      background-size: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      overflow: visible
+      position: unset
+
+      &::before
+        content: ''
+        height: 100%
+        width: 100%
+        position: absolute
+
+      &::after
+        background-image: inherit
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        content: ''
+        display: block
+        height: 24px
+        width: 24px
+        border-radius: 50%
+
+  .accountDetails-3k9g4n
+    align-items: center
+    height: 48px
+    width: 100%
+    padding: 12px
+    box-sizing: border-box
+
+  .directionRow-3v3tfG
+    width: 100%
+    margin-bottom: -1px
+
+  .button-2b6hmh
+    background-size: 0
+    cursor: default
+    height: 48px
+    width: 48px
+    border-radius: 0
+    position: relative
+
+    &:hover
+      .theme-dark &
+        background-color: $theme-dark-hover
+      .theme-light &
+        background-color: $theme-light-hover
+    &:active
+      .theme-dark &
+        background-color: $theme-dark-active
+      .theme-light &
+        background-color: $theme-light-active
+
+  // Settings button has this for some reason
+  .buttonInner-LmnaN_
+    display: none
+
+//.container-2Thooq
+//  .theme-dark &, .theme-light &
+//    background-color: transparent
+//  height: $guilds-height + $guilds-separator * 2
+//  box-sizing: border-box
+//  padding: $guilds-separator 0
+//  position: absolute
+//  bottom: 0
+//  left: -($guilds-width)
+//  z-index: 5
+//
+//.container-2Thooq .avatarSmall-3ACRaI
+//  height: $guilds-height
+//  width: $guilds-width
+//
+//  &:hover
+//    opacity: 1 !important
+//
+//  .inner-1W0Bkn
+//    background-size: 0
+//    cursor: default
+//    display: flex
+//    align-items: center
+//    justify-content: center
+//    border-radius: 0
+//
+//    &::before
+//      content: ''
+//      height: 100%
+//      width: 100%
+//      position: absolute
+//      pointer-events: none
+//      z-index: -1
+//
+//    &:hover::before
+//      background-color: $theme-dark-hover
+//    &:active::before
+//      background-color: $theme-dark-active
+//
+//    &::after
+//      background-image: inherit
+//      background-size: cover
+//      background-position: center
+//      background-repeat: no-repeat
+//      content: ''
+//      height: 24px
+//      width: 24px
+//      border-radius: 50%
+//
+//  .status-2kJpnA
+//    .theme-dark &, .theme-light &
+//      border: 0
+//    cursor: default
+//    height: 10px
+//    width: 10px
+//    border-radius: 50%
+//    bottom: 20%
+//    right: 20%

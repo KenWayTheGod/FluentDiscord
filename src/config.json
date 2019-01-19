@@ -1,0 +1,21 @@
+{
+  "info": {
+    "type": "stylus",
+
+    "name": "FluentDiscord",
+    "description": "An MDL2/Fluent Design inspired theme for Discord",
+    "version": "1.0",
+
+    "authors": [
+      {
+        "name": "intrnl",
+        "discord_id": "443765978132643850",
+        "github_username": "intrnl"
+      }
+    ],
+
+    "source": "https://github.com/intrnl/FluentDiscord"
+  },
+
+  "main": "index.styl"
+}
