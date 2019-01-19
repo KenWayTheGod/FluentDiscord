@@ -114,6 +114,7 @@
 
   // Add guilds button
   &.guildsAdd-21_IdK
+    fd-icon: 'add_white'
     background-color: transparent
     cursor: default
     border: 0
@@ -122,9 +123,10 @@
     &::before, .guildsAddInner-1KMFy-
       display: none
 
-    &::after
-      fluent-icon: ''
-      color: #fff
+    &:hover
+      background-color: $theme-dark-hover
+    &:active
+      background-color: $theme-dark-active
 
 .guild-1EfMGQ .guildInner-3DSoA4
   background-color: transparent !important
@@ -139,8 +141,7 @@
 
   // Discord Home
   a[draggable='false']:not([user]):not([channel])
-    &::before
-      fluent-icon: ''
+    fd-icon: 'home_white'
 
     svg
       display: none
