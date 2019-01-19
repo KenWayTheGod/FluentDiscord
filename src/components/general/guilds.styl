@@ -127,6 +127,22 @@
       background-color: $theme-dark-hover
     &:active
       background-color: $theme-dark-active
+  
+  // Unable to connect to guilds
+  .guildsError-3cFMtY
+    fd-icon: 'warning_white'
+    font-size: 0
+    line-height: 0
+    cursor: default
+    height: 100%
+    width: 100%
+    border: 0
+    border-radius: 0
+
+    .theme-dark &, .theme-light &
+      background-color: transparent
+      border-color: transparent
+
 
 .guild-1EfMGQ .guildInner-3DSoA4
   background-color: transparent !important
@@ -189,6 +205,10 @@
   position: absolute
   bottom: 20%
   right: 20%
+
+// Mention indicator
+.unreadMentionsIndicatorBottom-BXS58x
+  bottom: $guilds-height + $guilds-separator * 2
 
 
 // Account bar
