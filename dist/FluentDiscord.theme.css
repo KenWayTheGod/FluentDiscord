@@ -305,6 +305,10 @@ body::before {
   height: 50% !important;
 }
 .guild-1EfMGQ.guildsAdd-21_IdK {
+  background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/add_white.svg");
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: transparent;
   cursor: default;
   border: 0;
@@ -314,16 +318,11 @@ body::before {
 .guild-1EfMGQ.guildsAdd-21_IdK .guildsAddInner-1KMFy- {
   display: none;
 }
-.guild-1EfMGQ.guildsAdd-21_IdK::after {
-  font-family: 'Segoe MDL2 Assets';
-  font-size: 16px;
-  content: '';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  color: #fff;
+.guild-1EfMGQ.guildsAdd-21_IdK:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+.guild-1EfMGQ.guildsAdd-21_IdK:active {
+  background-color: rgba(255,255,255,0.2);
 }
 .guild-1EfMGQ .guildInner-3DSoA4 {
   background-color: transparent !important;
@@ -336,15 +335,11 @@ body::before {
   height: 100%;
   width: 100%;
 }
-.guild-1EfMGQ .guildInner-3DSoA4 a[draggable='false']:not([user]):not([channel])::before {
-  font-family: 'Segoe MDL2 Assets';
-  font-size: 16px;
-  content: '';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+.guild-1EfMGQ .guildInner-3DSoA4 a[draggable='false']:not([user]):not([channel]) {
+  background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/home_white.svg");
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .guild-1EfMGQ .guildInner-3DSoA4 a[draggable='false']:not([user]):not([channel]) svg {
   display: none;
@@ -424,7 +419,7 @@ body::before {
   flex-direction: column;
   align-items: flex-start;
   height: auto;
-  width: 213px;
+  width: 232px;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -516,12 +511,20 @@ body::before {
   padding: 12px;
   box-sizing: border-box;
 }
+.container-2Thooq .accountDetails-3k9g4n .username {
+  font-size: 16px;
+  max-width: unset;
+}
+.container-2Thooq .accountDetails-3k9g4n .discriminator {
+  font-size: 16px;
+  margin-top: unset;
+}
 .container-2Thooq .directionRow-3v3tfG {
   width: 100%;
-  margin-bottom: -1px;
 }
 .container-2Thooq .button-2b6hmh {
   background-size: 0;
+  opacity: 1;
   cursor: default;
   height: 48px;
   width: 48px;
@@ -539,6 +542,30 @@ body::before {
 }
 .theme-light .container-2Thooq .button-2b6hmh:active {
   background-color: rgba(0,0,0,0.2);
+}
+.container-2Thooq .button-2b6hmh::after {
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 48px;
+  width: 48px;
+}
+.container-2Thooq .button-2b6hmh[aria-label='Mute']::after {
+  background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/mic_white.svg");
+}
+.container-2Thooq .button-2b6hmh[aria-label='Unmute']::after {
+  background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/mic-disabled_white.svg");
+}
+.container-2Thooq .button-2b6hmh[aria-label='Deafen']::after {
+  background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/speaker_white.svg");
+}
+.container-2Thooq .button-2b6hmh[aria-label='Undeafen']::after {
+  background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/speaker-disabled_white.svg");
+}
+.container-2Thooq .button-2b6hmh[aria-label='User Settings']::after {
+  background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/settings_white.svg");
 }
 .container-2Thooq .buttonInner-LmnaN_ {
   display: none;
@@ -574,15 +601,12 @@ body::before {
   padding-left: 12px;
 }
 .header-2o-2hj::after {
-  font-family: 'Segoe MDL2 Assets';
-  font-size: 16px;
-  content: '';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+  background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/more_white.svg");
+  background-size: 18px;
+  background-position: center;
+  background-repeat: no-repeat;
   pointer-events: all;
+  content: '';
   height: 48px;
   width: 48px;
 }
