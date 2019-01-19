@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:theme": "gulp build:theme",
-    "watch:theme": "gulp watch:theme"
+    "watch:theme": "gulp watch:theme",
+    "build:import": "gulp build:import",
+    "watch:import": "gulp watch:import"
   },
   "author": "intrnl",
   "license": "GPL-3.0-or-later",
