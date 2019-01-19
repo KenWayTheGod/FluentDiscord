@@ -25,6 +25,8 @@
  */
 /**
  * Segoe, Meiryo, MS PGothic are trademarks of the Microsoft group of companies
+ * Uses Windows 10 icon set from Icons8, https://icons8.com/
+ *
  * All trademarked and copyrighted resources belongs to their respective owners
  */
 @font-face {
@@ -73,12 +75,6 @@
   font-family: 'Segoe UI';
   src: local('Segoe UI Light'), local('SegoeUI-Light'), url("https://intrnl.github.io/FluentDiscord-old/assets/fonts/SegoeUI-Light.ttf") format('truetype');
   font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Segoe MDL2 Assets';
-  src: local('Segoe MDL2 Assets'), local('SegoeMDL2Assets'), url("https://intrnl.github.io/FluentDiscord-old/assets/fonts/SegoeMDL2Assets.ttf") format('truetype');
-  font-weight: normal;
   font-style: normal;
 }
 @font-face {
