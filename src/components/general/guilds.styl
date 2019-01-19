@@ -210,9 +210,11 @@
 
   // Hide
   background-color: transparent
+  transition: background-color .25s ease
   pointer-events: none
 
   &:hover
+    transition-delay: .35s
     pointer-events: all
 
     .theme-dark &
@@ -221,10 +223,13 @@
       background-color: $theme-light
 
   > *:not(.avatarSmall-3ACRaI)
-    display: none !important
+    transition: opacity .25s ease
+    transition-delay: 0
+    opacity: 0
 
   &:hover > *:not(.avatarSmall-3ACRaI)
-    display: flex !important
+    transition-delay: .35s
+    opacity: 1
 
   // Avatar
   .avatarSmall-3ACRaI
@@ -286,6 +291,7 @@
     font-size: 16px
     line-height: normal
     align-items: center
+    display: flex
     height: 48px
     width: 100%
     padding: 12px
