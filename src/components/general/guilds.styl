@@ -282,6 +282,8 @@
         border-radius: 50%
 
   .accountDetails-3k9g4n
+    font-size: 16px
+    line-height: normal
     align-items: center
     height: 48px
     width: 100%
@@ -289,11 +291,23 @@
     box-sizing: border-box
 
     .username
-      font-size: 16px
+      font-size: inherit
       max-width: unset
+
+      .theme-dark &
+        color: $theme-light
+      .theme-light &
+        color: $theme-dark
+
     .discriminator
-      font-size: 16px
+      font-size: inherit
+      opacity: 1
       margin-top: unset
+
+      .theme-dark &
+        color: $theme-dark-blurb
+      .theme-light &
+        color: $theme-light-blurb
 
   .directionRow-3v3tfG
     width: 100%
