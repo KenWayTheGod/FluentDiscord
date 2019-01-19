@@ -410,7 +410,7 @@ body::before {
   bottom: 20%;
   right: 20%;
 }
-.container-2Thooq {
+.container-2Thooq:not(.powercord-spotify) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -421,29 +421,35 @@ body::before {
   position: absolute;
   bottom: 8px;
   left: 48px;
+  z-index: 5;
   background-color: transparent;
+  transition: background-color 0.25s ease;
   pointer-events: none;
 }
-.theme-dark .container-2Thooq,
-.theme-light .container-2Thooq {
+.theme-dark .container-2Thooq:not(.powercord-spotify),
+.theme-light .container-2Thooq:not(.powercord-spotify) {
   background-color: transparent;
 }
-.container-2Thooq:hover {
+.container-2Thooq:not(.powercord-spotify):hover {
+  transition-delay: 0.35s;
   pointer-events: all;
 }
-.theme-dark .container-2Thooq:hover {
+.theme-dark .container-2Thooq:not(.powercord-spotify):hover {
   background-color: #141414;
 }
-.theme-light .container-2Thooq:hover {
+.theme-light .container-2Thooq:not(.powercord-spotify):hover {
   background-color: #e6e6e6;
 }
-.container-2Thooq > *:not(.avatarSmall-3ACRaI) {
-  display: none !important;
+.container-2Thooq:not(.powercord-spotify) > *:not(.avatarSmall-3ACRaI) {
+  transition: opacity 0.25s ease;
+  transition-delay: 0;
+  opacity: 0;
 }
-.container-2Thooq:hover > *:not(.avatarSmall-3ACRaI) {
-  display: flex !important;
+.container-2Thooq:not(.powercord-spotify):hover > *:not(.avatarSmall-3ACRaI) {
+  transition-delay: 0.35s;
+  opacity: 1;
 }
-.container-2Thooq .avatarSmall-3ACRaI {
+.container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI {
   opacity: 1 !important;
   cursor: default;
   pointer-events: all;
@@ -456,13 +462,13 @@ body::before {
   bottom: 8px;
   left: 0;
 }
-.container-2Thooq .avatarSmall-3ACRaI:hover {
+.container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI:hover {
   background-color: rgba(255,255,255,0.1);
 }
-.container-2Thooq .avatarSmall-3ACRaI:active {
+.container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI:active {
   background-color: rgba(255,255,255,0.2);
 }
-.container-2Thooq .avatarSmall-3ACRaI .status-2zcSVk {
+.container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI .status-2zcSVk {
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -470,11 +476,11 @@ body::before {
   bottom: 20%;
   right: 20%;
 }
-.theme-dark .container-2Thooq .avatarSmall-3ACRaI .status-2zcSVk,
-.theme-light .container-2Thooq .avatarSmall-3ACRaI .status-2zcSVk {
+.theme-dark .container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI .status-2zcSVk,
+.theme-light .container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI .status-2zcSVk {
   border: 0;
 }
-.container-2Thooq .avatarSmall-3ACRaI .inner-1W0Bkn {
+.container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI .inner-1W0Bkn {
   background-size: 0;
   display: flex;
   align-items: center;
@@ -483,13 +489,13 @@ body::before {
   overflow: visible;
   position: unset;
 }
-.container-2Thooq .avatarSmall-3ACRaI .inner-1W0Bkn::before {
+.container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI .inner-1W0Bkn::before {
   content: '';
   height: 100%;
   width: 100%;
   position: absolute;
 }
-.container-2Thooq .avatarSmall-3ACRaI .inner-1W0Bkn::after {
+.container-2Thooq:not(.powercord-spotify) .avatarSmall-3ACRaI .inner-1W0Bkn::after {
   background-image: inherit;
   background-size: cover;
   background-position: center;
@@ -500,25 +506,45 @@ body::before {
   width: 24px;
   border-radius: 50%;
 }
-.container-2Thooq .accountDetails-3k9g4n {
+.container-2Thooq:not(.powercord-spotify) .accountDetails-3k9g4n {
+  font-size: 16px;
+  line-height: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   align-items: center;
+  display: flex;
   height: 48px;
   width: 100%;
   padding: 12px;
   box-sizing: border-box;
 }
-.container-2Thooq .accountDetails-3k9g4n .username {
-  font-size: 16px;
+.container-2Thooq:not(.powercord-spotify) .accountDetails-3k9g4n .username {
+  font-size: inherit;
   max-width: unset;
 }
-.container-2Thooq .accountDetails-3k9g4n .discriminator {
-  font-size: 16px;
+.theme-dark .container-2Thooq:not(.powercord-spotify) .accountDetails-3k9g4n .username {
+  color: #e6e6e6;
+}
+.theme-light .container-2Thooq:not(.powercord-spotify) .accountDetails-3k9g4n .username {
+  color: #141414;
+}
+.container-2Thooq:not(.powercord-spotify) .accountDetails-3k9g4n .discriminator {
+  font-size: inherit;
+  opacity: 1;
   margin-top: unset;
 }
-.container-2Thooq .directionRow-3v3tfG {
+.theme-dark .container-2Thooq:not(.powercord-spotify) .accountDetails-3k9g4n .discriminator {
+  color: #8e8e8e;
+}
+.theme-light .container-2Thooq:not(.powercord-spotify) .accountDetails-3k9g4n .discriminator {
+  color: #7b7b7b;
+}
+.container-2Thooq:not(.powercord-spotify) .directionRow-3v3tfG {
   width: 100%;
 }
-.container-2Thooq .button-2b6hmh {
+.container-2Thooq:not(.powercord-spotify) .button-2b6hmh {
   background-size: 0;
   opacity: 1;
   cursor: default;
@@ -527,19 +553,19 @@ body::before {
   border-radius: 0;
   position: relative;
 }
-.theme-dark .container-2Thooq .button-2b6hmh:hover {
+.theme-dark .container-2Thooq:not(.powercord-spotify) .button-2b6hmh:hover {
   background-color: rgba(255,255,255,0.1);
 }
-.theme-light .container-2Thooq .button-2b6hmh:hover {
+.theme-light .container-2Thooq:not(.powercord-spotify) .button-2b6hmh:hover {
   background-color: rgba(0,0,0,0.1);
 }
-.theme-dark .container-2Thooq .button-2b6hmh:active {
+.theme-dark .container-2Thooq:not(.powercord-spotify) .button-2b6hmh:active {
   background-color: rgba(255,255,255,0.2);
 }
-.theme-light .container-2Thooq .button-2b6hmh:active {
+.theme-light .container-2Thooq:not(.powercord-spotify) .button-2b6hmh:active {
   background-color: rgba(0,0,0,0.2);
 }
-.container-2Thooq .button-2b6hmh::after {
+.container-2Thooq:not(.powercord-spotify) .button-2b6hmh::after {
   background-size: 18px;
   background-position: center;
   background-repeat: no-repeat;
@@ -548,22 +574,22 @@ body::before {
   height: 48px;
   width: 48px;
 }
-.container-2Thooq .button-2b6hmh[aria-label='Mute']::after {
+.container-2Thooq:not(.powercord-spotify) .button-2b6hmh[aria-label='Mute']::after {
   background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/mic_white.svg");
 }
-.container-2Thooq .button-2b6hmh[aria-label='Unmute']::after {
+.container-2Thooq:not(.powercord-spotify) .button-2b6hmh[aria-label='Unmute']::after {
   background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/mic-disabled_white.svg");
 }
-.container-2Thooq .button-2b6hmh[aria-label='Deafen']::after {
+.container-2Thooq:not(.powercord-spotify) .button-2b6hmh[aria-label='Deafen']::after {
   background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/speaker_white.svg");
 }
-.container-2Thooq .button-2b6hmh[aria-label='Undeafen']::after {
+.container-2Thooq:not(.powercord-spotify) .button-2b6hmh[aria-label='Undeafen']::after {
   background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/speaker-disabled_white.svg");
 }
-.container-2Thooq .button-2b6hmh[aria-label='User Settings']::after {
+.container-2Thooq:not(.powercord-spotify) .button-2b6hmh[aria-label='User Settings']::after {
   background-image: url("https://intrnl.github.io/FluentDiscord/assets/icons/settings_white.svg");
 }
-.container-2Thooq .buttonInner-LmnaN_ {
+.container-2Thooq:not(.powercord-spotify) .buttonInner-LmnaN_ {
   display: none;
 }
 .channels-Ie2l6A {
