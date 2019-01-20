@@ -236,7 +236,8 @@
   height: auto
   width: auto
   margin: 0
-  padding: 0
+  padding: 8px
+  border: 0
   position: absolute
   bottom: $guilds-separator
   left: $guilds-width
@@ -247,20 +248,19 @@
 
   // Hide
   background-color: transparent
-  border: 1px solid transparent
-  transition: background-color .25s ease, border-color .25s ease
+  box-shadow: 0 10px 30px transparent, 0 1px 8px transparent
+  transition: background-color .25s ease, box-shadow .25s ease
   pointer-events: none
 
   &:hover
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.2)
     transition-delay: .35s
     pointer-events: all
 
     .theme-dark &
-      background-color: $theme-dark
-      border-color: $theme-dark-outline
+      background-color: lighten($theme-dark, 7.5%)
     .theme-light &
-      background-color: $theme-light
-      border-color: $theme-light-outline
+      background-color: darken($theme-light, 7.5%)
 
   > *:not(.avatarSmall-3ACRaI)
     transition: opacity .25s ease
