@@ -1,6 +1,8 @@
 'use strict'
 
 const gulp = require('gulp')
+const os = require('os')
+const path = require('path')
 
 const rename = require('gulp-rename')
 const insert = require('gulp-insert')
@@ -44,7 +46,16 @@ gulp.task('build:theme', () => gulp.src(`src/${main}`)
   .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('dist')))
 
-gulp.task('watch:theme', () => gulp.watch(`src/**/**`, gulp.series('build:theme')))
+  gulp.task('dev:build', () => gulp.src(`src/${main}`)
+  .pipe(stylus({ define: { currentDate: `${current.getDay()}/${current.getMonth()}` } }))
+  .pipe(postcss(postcssPlugins))
+  .pipe(insert.prepend(metaHeader))
+  .pipe(rename((path) => { path.basename = `${config.name}` })) // eslint-disable-line brace-style
+  .pipe(eol('\r\n', true))
+  .pipe(gulp.dest(path.join(os.homedir(), '/Documents/etc/powercord/src/Powercord/plugins/pc-styleManager/themes/'))))
+
+gulp.task('watch:theme', () => gulp.watch('src/**/**', gulp.series('build:theme')))
+gulp.task('dev:watch', () => gulp.watch('src/**/**', gulp.series('dev:build')))
 
 gulp.task('build:import', () => gulp.src(`src/import.styl`)
   .pipe(stylus())
