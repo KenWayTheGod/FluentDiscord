@@ -375,15 +375,30 @@
       width: 48px
 
     &[aria-label='Mute']::after
-      fd-iconbg: 'mic_white'
+      .theme-dark &
+        fd-iconbg: 'mic_white'
+      .theme-light &
+        fd-iconbg: 'mic_black'
     &[aria-label='Unmute']::after
-      fd-iconbg: 'mic-disabled_white'
+      .theme-dark &
+        fd-iconbg: 'mic-disabled_white'
+      .theme-light &
+        fd-iconbg: 'mic-disabled_black'
     &[aria-label='Deafen']::after
-      fd-iconbg: 'speaker_white'
+      .theme-dark &
+        fd-iconbg: 'speaker_white'
+      .theme-light &
+        fd-iconbg: 'speaker_black'
     &[aria-label='Undeafen']::after
-      fd-iconbg: 'speaker-disabled_white'
+      .theme-dark &
+        fd-iconbg: 'speaker-disabled_white'
+      .theme-light &
+        fd-iconbg: 'speaker-disabled_black'
     &[aria-label='User Settings']::after
-      fd-iconbg: 'settings_white'
+      .theme-dark &
+        fd-iconbg: 'settings_white'
+      .theme-light &
+        fd-iconbg: 'settings_black'
 
   // Settings button has this for some reason
   .buttonInner-LmnaN_

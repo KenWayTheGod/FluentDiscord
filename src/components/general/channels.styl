@@ -45,3 +45,191 @@
 
 .button-1w5pas
   display: none
+
+
+// Categories
+.containerDefault-3GGEv_, .containerDragAfter-3TEhpe, .containerDragBefore-3Dzc5x, .containerUserOver-1Tcb7l
+  height: 48px
+  padding-top: 48px - 34px
+  box-sizing: border-box
+
+.wrapperDefault-10Jfvz, .wrapperHovered-28fu1D,
+.wrapperCollapsed-3Fbxl6, .wrapperHoveredCollapsed-1PADEo,
+.wrapperMuted-3KeA2M, .wrapperUnread-1JPWj3
+  color: $theme-light
+  cursor: default
+  display: flex
+  align-items: center
+  height: 34px
+  padding-left: 5px + 8px
+  padding-right: 0
+  border-radius: 0
+
+  &:hover
+    color: $theme-light
+    background-color: $theme-dark-hover
+  &:active
+    background-color: $theme-dark-active
+
+.wrapperMuted-3KeA2M
+  color: $theme-dark-blurb
+
+.iconTransition-2pOJ7l
+  background-size: 12px
+  background-position: center
+  background-repeat: no-repeat
+  order: 1
+  height: 34px
+  width: 34px
+  position: unset
+
+  path
+    display: none
+
+  &.directionRight-O8AY4M
+    fd-iconbg: 'expand-arrow_white'
+    transform: none
+
+  &.directionDown-26e7eE
+    fd-iconbg: 'collapse-arrow_white'
+    transform: none
+
+.nameCollapsed-34uFWo, .nameDefault-2DI02H, .nameHovered-1gxhWH, .nameHoveredCollapsed-2orEWB, .nameMuted-1MCOt4, .nameUnread-njOjIS
+  color: inherit
+  font-size: 12px
+  font-weight: 600
+  line-height: normal
+  text-transform: uppercase
+  margin-right: 8px
+  order: 2
+
+.marginReset-236NPn
+  order: 1
+  margin-left: 0 !important
+
+button.addButton-1BORro
+  fd-icon: 'add_white'
+  background-size: 13px
+  cursor: default
+  height: 34px
+  width: 34px
+  border-radius: 0
+
+  &:hover
+    background-color: $theme-dark-hover
+  &:active
+    background-color: $theme-dark-active
+
+  .contents-18-Yxp
+    display: none
+
+
+// Channels
+.content-20Aix8
+  color: $theme-light
+  cursor: default
+  height: 100%
+  padding-left: 5px + 8px
+  padding-right: 0
+  margin: 0
+  border-radius: 0
+  position: relative
+
+  &::before
+    transform: translateY(-50%)
+    content: ''
+    height: 0
+    width: 5px
+    position: absolute
+    top: 50%
+    left: 0
+    z-index: 3
+
+  .flex-1xMQg5
+    display: none
+  
+  &:hover
+    color: $theme-light
+    background-color: $theme-dark-hover
+    .flex-1xMQg5
+      display: flex
+  &:active
+    background-color: $theme-dark-active
+
+.contentMutedText-2y6aPQ, .contentMutedVoice-2lJ0UD
+  color: $theme-dark-blurb
+
+.contentSelectedText-3wUhMi, .contentSelectedVoice-1WDIBM
+  background-color: transparent
+
+  &::before
+    background-color: var(--int-accent-color)
+    height: 50%
+
+.unread-1Dp-OI
+  background-color: $theme-light
+  opacity: .35
+  transform: translateY(-50%)
+  height: 25%
+  width: 5px
+  margin-top: 0
+  border-radius: 0
+  position: absolute
+  top: 50%
+  left: 0
+  z-index: 3
+
+.icon-sxakjD
+  margin-right: 8px
+
+.colorConnectedText-1c_uzY, .colorConnectedVoice-3kyvUN,
+.colorDefaultText-oas-QM, .colorDefaultVoice-3wYlhb,
+.colorHoveredText-OZnAgu, .colorHoveredVoice-1kucsK,
+.colorLockedText-1VRkPt, .colorLockedVoice-2UlBjl,
+.colorSelectedText-1y4Wvs, .colorSelectedVoice-Xcb_9R,
+.colorUnreadText-2t7XRb, .colorUnreadVoice-137o4S,
+.colorMutedText-36M8WR, .colorMutedVoice-3ghIuw
+  color: inherit
+
+.nameConnectedText-3CzNQn, .nameConnectedVoice-MHUX5F,
+.nameDefaultText-24KCy5, .nameDefaultVoice-3WUH7s,
+.nameHoveredText-1uO31y, .nameHoveredVoice-YJ1Vfd,
+.nameLockedText-3pqQcL, .nameLockedVoice-26MhB1,
+.nameMutedText-3Vj4bM, .nameMutedVoice-3oxyQZ,
+.nameSelectedText-sp_EUw, .nameSelectedVoice-1qSph5,
+.nameUnreadText-DfkrI4, .nameUnreadVoice-EVo-wI
+  color: inherit
+  margin-right: 8px
+
+.iconSpacing-3JkGQO
+  margin-left: 0
+
+.actionIcon-2Hi9ZG
+  background-size: 16px
+  background-position: center
+  background-repeat: no-repeat
+  opacity: 1
+  cursor: default
+  height: 34px
+  width: 34px
+
+  &:hover
+    background-color: $theme-dark-hover
+    opacity: 1
+  &:active
+    background-color: $theme-dark-active
+
+  path
+    display: none
+
+  svg
+    background-size: inherit
+    background-position: inherit
+    background-repeat: inherit
+    height: 100%
+    width: 100%
+
+  &[name='Gear']
+    fd-iconbg: 'settings_white'
+  [name='Invite']
+    fd-iconbg: 'add-user_white'
