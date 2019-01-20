@@ -250,7 +250,8 @@
   // Hide
   background-color: transparent
   box-shadow: 0 10px 30px transparent, 0 1px 8px transparent
-  transition: background-color .25s ease, box-shadow .25s ease
+  border: 1px solid transparent
+  transition: background-color .25s ease, box-shadow .25s ease, border-color .25s ease
   pointer-events: none
 
   &:hover
@@ -259,9 +260,11 @@
     pointer-events: all
 
     .theme-dark &
-      background-color: lighten($theme-dark, 7.5%)
+      background-color: $theme-dark-popout
+      border-color: $theme-dark-popout-outline
     .theme-light &
-      background-color: darken($theme-light, 7.5%)
+      background-color: $theme-light-popout
+      border-color: $theme-light-popout-outline
 
   > *:not(.avatarSmall-3ACRaI)
     transition: opacity .25s ease
