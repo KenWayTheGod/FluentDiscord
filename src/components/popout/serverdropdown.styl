@@ -8,41 +8,45 @@
   left: $guilds-width + $guilds-separator !important
 
 .menu-Sp6bN1
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.2) !important
   animation: fade-in .25s ease
   width: $channels-width - $guilds-separator * 2
-  border: 1px solid transparent
+  padding: 8px
+  border: 0
   border-radius: 0
   box-sizing: border-box
 
   .theme-dark &
-    background-color: $theme-dark
+    background-color: lighten($theme-dark, 7.5%)
     box-shadow: 0 0
-    border-color: $theme-dark-outline
   .theme-light &
-    background-color: $theme-light
+    background-color: darken($theme-light, 7.5%)
     box-shadow: 0 0
-    border-color: $theme-light-outline
 
 .item-1GzJrl
-  font-size: 14px
+  font-size: 15px
   line-height: normal
   cursor: default
   display: flex
   align-items: center
-  min-height: 34px
-  padding: 0 12px
+  padding: 8px 12px
 
-  .theme-dark &
-    color: $theme-light
-  .theme-light &
-    color: $theme-dark
+  &, &.invite-271nFU, &.leave-1DRJfn
+    .theme-dark &
+      color: $theme-light
+    .theme-light &
+      color: $theme-dark
+
+    &:hover
+      .theme-dark &
+        color: $theme-light
+      .theme-light &
+        color: $theme-dark
 
   &:hover
     .theme-dark &
-      color: $theme-light
       background-color: $theme-dark-hover
     .theme-light &
-      color: $theme-dark
       background-color: $theme-light-hover
   &:active
     .theme-dark &
@@ -52,6 +56,7 @@
 
 .icon-2doZ3q
   background-size: 0
+  opacity: 1
   height: 18px
   width: 18px
   margin-right: 12px
@@ -88,3 +93,12 @@
     fd-iconbg: 'visibility-disabled_white'
   &[style='background-image: url("/assets/00de6b3cbb5c4dbcec817c91262f5f5b.svg");']::before
     fd-iconbg: 'exit_white'
+
+.separator-2zcjq8
+  margin: 8px
+  border-bottom: 1px solid transparent
+  
+  .theme-dark &
+    border-bottom-color: $theme-dark-outline
+  .theme-light &
+    border-bottom-color: $theme-light-outline
