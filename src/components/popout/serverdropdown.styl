@@ -51,4 +51,40 @@
       background-color: $theme-light-active
 
 .icon-2doZ3q
+  background-size: 0
+  height: 18px
+  width: 18px
   margin-right: 12px
+
+  &::before
+    background-size: 18px
+    background-position: center
+    background-repeat: no-repeat
+    content: ''
+    display: block
+    height: 100%
+    width: 100%
+
+    .theme-light &
+      filter: invert(1)
+
+  &[style='background-image: url("/assets/d4ff0d2af68cd1119f0d16ef79d1369c.svg");']::before
+    fd-iconbg: 'add-user_white'
+  &[style='background-image: url("/assets/9a93097ab591379729c68f15a17b26af.svg");']::before
+    fd-iconbg: 'settings_white'
+  &[style='background-image: url("/assets/2fc862597335421b35a79aa9aaba4a86.svg");']::before
+    fd-iconbg: 'add-row_white'
+  &[style='background-image: url("/assets/52bc30f8a2b1a51f808a785819ca00b5.svg");']::before
+    fd-iconbg: 'add-folder_white'
+  &[style='background-image: url("/assets/6a711bd91522e885413464a88a4e3c69.svg");']::before
+    fd-iconbg: 'notification-center_white'
+  &[style='background-image: url("/assets/6afcd5d6a8c9d467e27e1bb48755dce0.svg");']::before
+    fd-iconbg: 'shield_white'
+  &[style='background-image: url("/assets/bc11a9099f5729962c095cb49d5042f6.svg");']::before
+    fd-iconbg: 'edit-row_white'
+  &[style='background-image: url("/assets/858df73648ac3877a22156da2e69a5fd.svg");']::before
+    fd-iconbg: 'visibility_white'
+  &[style='background-image: url("/assets/50f8ef2cdb4e7697a4202fb9c6d0e1fc.svg");']::before
+    fd-iconbg: 'visibility-disabled_white'
+  &[style='background-image: url("/assets/00de6b3cbb5c4dbcec817c91262f5f5b.svg");']::before
+    fd-iconbg: 'exit_white'
