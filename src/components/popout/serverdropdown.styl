@@ -11,17 +11,18 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.2) !important
   animation: fade-in .25s ease
   width: $channels-width - $guilds-separator * 2
-  padding: 8px
-  border: 0
+  border: 1px solid transparent
   border-radius: 0
   box-sizing: border-box
 
   .theme-dark &
-    background-color: lighten($theme-dark, 7.5%)
+    background-color: $theme-dark-popout
     box-shadow: 0 0
+    border-color: $theme-dark-popout-outline
   .theme-light &
-    background-color: darken($theme-light, 7.5%)
+    background-color: $theme-light-popout
     box-shadow: 0 0
+    border-color: $theme-light-popout-outline
 
 .item-1GzJrl
   font-size: 15px
@@ -95,10 +96,10 @@
     fd-iconbg: 'exit_white'
 
 .separator-2zcjq8
-  margin: 8px
+  margin: 0 8px
   border-bottom: 1px solid transparent
   
   .theme-dark &
-    border-bottom-color: $theme-dark-outline
+    border-bottom-color: $theme-dark-popout-outline
   .theme-light &
-    border-bottom-color: $theme-light-outline
+    border-bottom-color: $theme-light-popout-outline
