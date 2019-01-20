@@ -13,10 +13,6 @@ const stylus = require('gulp-stylus')
 const sourcemap = require('gulp-sourcemaps')
 
 const postcss = require('gulp-postcss')
-const postcssPlugins = [
-  require('autoprefixer')(),
-  require('cssnano')(),
-]
 
 
 const { info: config, main } = require('./src/config.json')
@@ -38,7 +34,7 @@ const commitHash = () => require('child_process')
 gulp.task('build:theme', () => gulp.src(`src/${main}`)
   .pipe(sourcemap.init())
   .pipe(stylus({ define: { currentDate: `${current.getDay()}/${current.getMonth()}` } }))
-  .pipe(postcss(postcssPlugins))
+  .pipe(postcss([require('autoprefixer')(), require('cssnano')()]))
   .pipe(insert.prepend(metaHeader))
   .pipe(insert.append(`\r\n/* version ${commitHash()} */`))
   .pipe(rename((path) => { path.basename = `import` })) // eslint-disable-line brace-style
@@ -48,7 +44,7 @@ gulp.task('build:theme', () => gulp.src(`src/${main}`)
 
   gulp.task('dev:build', () => gulp.src(`src/${main}`)
   .pipe(stylus({ define: { currentDate: `${current.getDay()}/${current.getMonth()}` } }))
-  .pipe(postcss(postcssPlugins))
+  .pipe(postcss([require('autoprefixer')()]))
   .pipe(insert.prepend(metaHeader))
   .pipe(rename((path) => { path.basename = `${config.name}` })) // eslint-disable-line brace-style
   .pipe(eol('\r\n', true))
