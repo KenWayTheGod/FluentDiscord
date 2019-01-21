@@ -1,8 +1,9 @@
 .popoutBottom-1YbShG.noArrow-3BYQ0Z[style*='overflow: hidden;']
   box-shadow: 0 0
+  display: flex
   transform: none !important
   height: auto !important
-  width: auto !important
+  width: $channels-width - $guilds-separator * 2 !important
   overflow: visible !important
   margin-top: 8px
   left: $guilds-width + $guilds-separator !important
@@ -10,7 +11,8 @@
 .menu-Sp6bN1
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.2) !important
   animation: fade-in .25s ease
-  width: $channels-width - $guilds-separator * 2
+  width: auto
+  margin-left: auto
   border: 1px solid transparent
   border-radius: 0
   box-sizing: border-box
