@@ -1,0 +1,92 @@
+.headerBar-UHpsPw, .title-3qD0b-
+  padding: 0 20px
+
+  .theme-dark &, .theme-light &
+    background-color: transparent
+
+  & > .flex-1xMQg5:last-child
+    margin-right: -20px
+
+  [href='https://support.discordapp.com']
+    display: none
+
+
+.channelName-3stJzi, .groupDM-3qU0Ks .channelName-3stJzi, .groupDMManaged-1GyXtq .channelName-3stJzi, .input-autosize-input, .input-autosize-input:focus
+  .theme-dark &
+    color: $theme-light
+  .theme-light &
+    color: $theme-dark
+
+.channelIcon-MsmKOO
+  .theme-dark &
+    color: $theme-dark-blurb
+  .theme-light
+    color: $theme-light-blurb
+
+
+.divider-2PMBlV
+  opacity: .5
+  height: 48px - 8px * 2
+  width: 0
+  margin: 8px 0
+  border-left: 1px solid transparent
+
+  .theme-dark &, .theme-light &
+    background-color: transparent
+  .theme-dark &
+    border-left-color: $theme-dark-outline
+  .theme-light &
+    border-left-color: $theme-light-outline
+
+.iconMargin-2YXk4F
+  height: 48px
+  width: 48px
+  margin: 0
+
+  &:hover
+    .theme-dark &
+      background-color: $theme-dark-hover
+    .theme-light &
+      background-color: $theme-light-hover
+  &:active
+    .theme-dark &
+      background-color: $theme-dark-active
+    .theme-light &
+      background-color: $theme-light-active
+
+.icon-1R19_H
+  background-size: 20px
+  background-position: center
+  background-repeat: no-repeat
+  opacity: 1
+  cursor: default
+  height: 100%
+  width: 100%
+
+  .theme-light &
+    filter: invert(1)
+
+  &:hover
+    opacity: 1
+
+  g, path
+    display: none
+
+  &[name='NotificationBell']
+    fd-iconbg: 'notification-side_white'
+  &[name='NotificationBellOff']
+    fd-iconbg: 'notification-bell_white'
+  &[name='Pin']
+    fd-iconbg: 'pin_white'
+  &[name='People']
+    fd-iconbg: 'people_white'
+  &[name='Mention']
+    fd-iconbg: 'email_white'
+
+.iconBadge-2dji3k
+  border: 0
+  border-radius: 50%
+  position: absolute
+  top: unset
+  bottom: 20%
+  right: 20%

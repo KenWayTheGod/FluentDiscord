@@ -1,0 +1,94 @@
+.contextMenu-HLZMGh
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.2)
+  animation: fade-in .25s ease
+  width: 205px
+  //width: auto
+  //max-width: 240px
+  border: 1px solid transparent
+  border-radius: 0
+
+  &.theme-dark
+    background-color: $theme-dark-popout
+    border-color: $theme-dark-popout-outline
+  &.theme-light
+    background-color: $theme-light-popout
+    border-color: $theme-light-popout-outline
+
+  // #TODO: Auto width on context menu
+  // Current solution has quirks in that, the
+  // context menu can go off-screen
+  // Unless this is solved, I'm not doing it
+
+  //& &
+  //  margin-left: 0
+  //  position: absolute
+  //  top: 0 !important
+  //  left: 100% !important
+  
+  //&.invertChildX-2fq7sY &
+  //  top: 0 !important
+  //  left: unset !important 
+  //  right: 100% !important
+
+.itemGroup-1tL0uz
+  border: 0 !important
+
+  &::before
+    content: ''
+    display: block
+    height: 0
+    width: calc(100% - 8px * 2)
+    margin: 0 8px
+    border-top: 0px solid transparent
+
+    .theme-dark &
+      border-top-color: $theme-dark-popout-outline
+    .theme-light &
+      border-top-color: $theme-light-popout-outline
+
+  &:not(:empty):not(:first-child)
+    &::before
+      border-top-width: 1px
+
+  &:empty + &:not(:empty)
+    &::before
+      border-top-width: 0px
+
+.item-1Yvehc
+  font-size: 15px
+  font-weight: normal
+  line-height: normal
+  margin: 0
+  padding: 8px 12px
+  border-radius: 0
+  box-sizing: border-box
+  //position: relative
+  //overflow: visible
+
+  .theme-dark &
+    color: $theme-light
+  .theme-light &
+    color: $theme-dark
+
+  &:hover
+    .theme-dark &
+      background-color: $theme-dark-hover
+      color: $theme-light
+    .theme-light &
+      background-color: $theme-light-hover
+      color: $theme-dark
+  &:active
+    .theme-dark &
+      background-color: $theme-dark-active
+    .theme-light &
+      background-color: $theme-light-active
+
+  &.itemSlider-FZeYw0
+    min-width: 180px
+
+  &.itemSubMenu-1vN_Yn
+    &:active
+      .theme-dark &
+        background-color: $theme-dark-hover
+      .theme-light &
+        background-color: $theme-light-hover

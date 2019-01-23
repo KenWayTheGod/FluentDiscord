@@ -5,6 +5,8 @@
     background-color: $theme-light-bg
 
   form
+    margin: 0 20px
+
     .theme-dark &, .theme-light &
       background-color: transparent
 
@@ -17,6 +19,9 @@
   .theme-dark &, .theme-light &
     background-color: transparent
 
+.messages-3amgkR
+  padding-bottom: 10px
+
 
 // Chat form
 .channelTextArea-rNsIhG
@@ -25,7 +30,11 @@
   .theme-dark &, .theme-light &
     border-top: 0
 
+.channelTextAreaDisabled-rZtG8r
+  opacity: 1
+
 .inner-zqa7da
+  cursor: default
   border-radius: 10px
 
   .theme-dark &
@@ -36,10 +45,57 @@
   .chat-3bRxxu &
     margin-top: -10px
 
+.innerDisabled-2mc-iF
+  cursor: default
+
+.textArea-2Spzkt
+  .theme-dark &
+    color: $theme-light
+  .theme-light &
+    color: $theme-dark
+
+  &::placeholder
+    .theme-dark &
+      color: $theme-dark-blurb
+    .theme-light &
+      color: $theme-light-blurb
+
+// Chat divider
+.divider-3gKybi
+  text-align: left
+  display: flex
+  align-items: center
+  margin-top: 10px
+  margin-left: 0
+  margin-right: 0
+  padding: 0 20px
+
+  &.dividerRed-MKoLlr::after
+    background-color: var(--int-accent-color)
+    content: ''
+    display: block
+    height: 10px
+    width: 10px
+    border-radius: 50%
+
+.dividerContent-2L12VI
+  font-size: 0.9375rem
+  font-weight: normal
+  line-height: normal
+  margin-right: 12px
+
+  .theme-dark &
+    color: $theme-dark-blurb !important
+  .theme-light &
+    color: $theme-light-blurb !important
+
+  &::before, &::after
+    display: none
+
 // Cozy Message
 .containerCozy-jafyvG
-  padding-top: 0
-  padding-bottom: 20px
+  padding-top: 10px
+  padding-bottom: 10px
 
   .hasMore-3e72_v + &
     padding-top: 20px
@@ -109,6 +165,13 @@
     &:empty
       display: none
 
+.markup-2BOw-j
+  code.inline
+    border-radius: 0
+
+    .theme-dark &, .theme-light &
+      background-color: transparent
+
 // Message avatar
 .avatar-17mtNa
   margin-top: 2px
@@ -118,3 +181,121 @@
   border-radius: 10px
 
 // Embed
+.embed-IeVjo6
+  border-radius: 10px
+  overflow: hidden
+
+.embedPill-1Zntps
+  border-radius: 0
+
+.embedInner-1-fpTo
+  border: 0
+  border-radius: 0
+
+  .theme-dark &
+    background-color: $theme-dark
+  .theme-light &
+    background-color: $theme-light
+
+// New server creation, welcome message
+.welcomeMessage-3_Mcht
+  align-items: flex-start
+
+  .h1-1IDj26
+    font-size: 1.25rem
+    font-weight: normal
+    line-height: normal
+    text-transform: none
+    margin-top: 0
+    margin-bottom: 20px
+
+    .theme-dark &
+      color: $theme-light
+    .theme-light &
+      color: $theme-dark
+
+  p
+    font-size: 1rem
+    line-height: normal
+    width: 70%
+    margin-top: 0
+    margin-bottom: 20px
+    margin-left: 12px
+
+    .theme-dark &
+      color: $theme-dark-blurb
+    .theme-light &
+      color: $theme-light-blurb
+
+  &::after
+    opacity: .25
+    content: ''
+    display: block
+    height: 0
+    width: 100%
+    border-bottom: 1px solid transparent
+    box-sizing: border-box
+
+    .theme-dark &
+      border-bottom-color: $theme-dark-outline
+    .theme-light &
+      border-bottom-color: $theme-light-outline
+
+.exclamation-1mi7Vi, .share-1EA-d2, .mobile-3_KEmF, .twitter-1TN3uJ
+  background-size: 75%
+  background-position: center
+  background-repeat: no-repeat
+  opacity: .75
+
+  .theme-light &
+    filter: invert(1)
+
+.exclamation-1mi7Vi
+  fd-iconbg: 'chat-bubble-question_white'
+.share-1EA-d2
+  fd-iconbg: 'add-user_white'
+.mobile-3_KEmF
+  fd-iconbg: 'smartphone-notification_white'
+.twitter-1TN3uJ
+  fd-asset: 'platforms/twitter_white.svg'
+
+// Start of channel
+.base-34jWEe
+  height: auto
+  margin: 0
+  padding: 20px
+  border-bottom: 0
+
+  .theme-dark &
+    background-image: none
+  .theme-light &
+    background-image: none
+
+  &:empty
+    display: none
+
+  &::after
+    opacity: .25
+    content: ''
+    display: block
+    height: 0
+    width: 100%
+    margin-top: 20px
+    border-bottom: 1px solid transparent
+    box-sizing: border-box
+
+    .theme-dark &
+      border-bottom-color: $theme-dark-outline
+    .theme-light &
+      border-bottom-color: $theme-light-outline
+
+  h1
+    font-size: 1rem
+    font-weight: normal
+    line-height: normal
+
+    .theme-dark &
+      color: $theme-dark-blurb
+    .theme-light &
+      color: $theme-light-blurb
+
