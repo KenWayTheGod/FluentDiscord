@@ -82,6 +82,7 @@
   font-size: 0.9375rem
   font-weight: normal
   line-height: normal
+  text-transform: none
   margin-right: 12px
 
   .theme-dark &
@@ -97,11 +98,8 @@
   padding-top: 10px
   padding-bottom: 10px
 
-  .hasMore-3e72_v + &
-    padding-top: 20px
-
 .divider-32i8lo
-  display: none
+  border: 0 !important
 
 
 .message-1PNnaP
@@ -130,7 +128,7 @@
   height: 20px
   margin-bottom: 5px
 
-.timestampCozy-2hLAPV
+.timestampCozy-2hLAPV, .timestamp-1E3uAL
   font-size: .75rem
   font-weight: normal
   line-height: normal
@@ -196,6 +194,13 @@
     background-color: $theme-dark
   .theme-light &
     background-color: $theme-light
+
+// System message
+.content-2M3n_H
+  .theme-dark &
+    color: $theme-dark-blurb
+  .theme-light &
+    color: $theme-light-blurb
 
 // New server creation, welcome message
 .welcomeMessage-3_Mcht
@@ -299,3 +304,29 @@
     .theme-light &
       color: $theme-light-blurb
 
+// No channel
+.noChannel-Z1DQK7
+  .theme-dark &
+    background-color: $theme-dark-bg
+  .theme-light &
+    background-color: $theme-light-bg
+
+.title-2BxgL2
+  font-size: 1.25rem
+  font-weight: bold
+  line-height: normal
+  text-transform: none
+
+  .theme-dark &
+    color: $theme-light
+  .theme-light &
+    color: $theme-dark
+
+.text-GwUZgS
+  font-size: 1rem
+  line-height: normal
+
+  .theme-dark &
+    color: $theme-dark-blurb
+  .theme-light &
+    color: $theme-light-blurb

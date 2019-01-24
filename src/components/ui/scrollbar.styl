@@ -1,0 +1,35 @@
+::-webkit-scrollbar
+  width: 8px !important
+
+  &-track
+    background-color: transparent !important
+    border: 0 !important
+    border-radius: 0 !important
+
+  &-track-piece
+    background-color: transparent !important
+    border: 0 !important
+    border-radius: 0 !important
+
+  &-thumb
+    border: 2px solid transparent !important
+    border-radius: 0 !important
+    visibility: visible !important
+
+    .theme-dark &
+      background-color: rgba(#fff, .15) !important
+    .theme-light &
+      background-color: rgba(#000, .15) !important
+
+    &:hover
+      .theme-dark &
+        background-color: rgba(#fff, .25) !important
+      .theme-light &
+        background-color: rgba(#000, .25) !important
+
+    &:active
+      .theme-dark &
+        background-color: rgba(#fff, .45) !important
+      .theme-light &
+        background-color: rgba(#000, .45) !important
+

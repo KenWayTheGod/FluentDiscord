@@ -3,6 +3,7 @@
 
   .theme-dark &, .theme-light &
     background-color: transparent
+    box-shadow: 0 0
 
   & > .flex-1xMQg5:last-child
     margin-right: -20px
@@ -22,6 +23,18 @@
     color: $theme-dark-blurb
   .theme-light
     color: $theme-light-blurb
+
+.topic-2QX7LI
+  margin-left: 12px
+  padding-left: 0
+
+  .theme-dark &
+    color: $theme-dark-blurb
+  .theme-light &
+    color: $theme-light-blurb
+
+  &::before
+    display: none
 
 
 .divider-2PMBlV
@@ -66,7 +79,7 @@
   .theme-light &
     filter: invert(1)
 
-  &:hover
+  &:hover, .iconBadgeWrapper-1vhG5S:hover &
     opacity: 1
 
   g, path
@@ -84,6 +97,7 @@
     fd-iconbg: 'email_white'
 
 .iconBadge-2dji3k
+  cursor: default
   border: 0
   border-radius: 50%
   position: absolute
