@@ -92,3 +92,55 @@
         background-color: $theme-dark-hover
       .theme-light &
         background-color: $theme-light-hover
+
+
+.container-3cGP6G
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 1px 8px rgba(0, 0, 0, 0.2)
+  animation: fade-in .25s ease
+  display: flex
+  flex-direction: column
+  width: auto
+  min-width: unset
+  padding: 0
+  border: 1px solid transparent
+  border-radius: 0
+
+  .theme-dark &
+    background-color: $theme-dark-popout
+    border-color: $theme-dark-popout-outline
+  .theme-light &
+    background-color: $theme-light-popout
+    border-color: $theme-light-popout-outline
+
+.item-2J1YMK
+  font-size: 15px
+  font-weight: normal
+  line-height: normal
+  text-align: left
+  cursor: default
+  display: inline
+  width: auto
+  margin: 0
+  padding: 8px 12px
+  border-radius: 0
+
+  .theme-dark &
+    color: $theme-light
+  .theme-light &
+    color: $theme-dark
+
+  &:hover
+    cursor: default
+    
+    .theme-dark &
+      background-color: $theme-dark-hover
+      color: $theme-light
+    .theme-light &
+      background-color: $theme-light-hover
+      color: $theme-dark
+  &:active
+    .theme-dark &
+      background-color: $theme-dark-active
+    .theme-light &
+      background-color: $theme-light-active
+
