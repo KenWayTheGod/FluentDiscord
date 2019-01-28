@@ -42,7 +42,7 @@ gulp.task('build:theme', () => gulp.src(`src/${main}`)
   .pipe(sourcemap.write('.'))
   .pipe(gulp.dest('dist')))
 
-  gulp.task('dev:build', () => gulp.src(`src/${main}`)
+gulp.task('dev:build', () => gulp.src(`src/${main}`)
   .pipe(stylus({ define: { currentDate: `${current.getDay()}/${current.getMonth()}` } }))
   .pipe(postcss([require('autoprefixer')()]))
   .pipe(insert.prepend(metaHeader))
