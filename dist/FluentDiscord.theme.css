@@ -1,5 +1,5 @@
 /*//META{"name":"FluentDiscord","description":"An MDL2/Fluent Design inspired theme for Discord","author":"intrnl","version":"1.0","source":"https://github.com/intrnl/FluentDiscord"}*//**/
-@import "https://intrnl.github.io/FluentDiscord/dist/import.css?v=96c283";
+@import "https://intrnl.github.io/FluentDiscord/dist/import.css?v=4b98d5";
 /**
  * Copyright (C) 2018  intrnl
  * 
@@ -17,7 +17,8 @@
  * along with this work.  If not, see <https://www.gnu.org/licenses/>.
  */
 /**
- * Segoe, Meiryo, MS PGothic are trademarks of the Microsoft group of companies
+ * Uses fonts that are trademarks of Microsoft group of companies, that
+ * includes Segoe, Meiryo, MS PGothic, and Consolas
  * Uses Windows 10 icon set from Icons8, https://icons8.com/
  *
  * All trademarked and copyrighted resources belongs to their respective owners
