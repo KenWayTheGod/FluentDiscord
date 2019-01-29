@@ -8,11 +8,8 @@
   & > .flex-1xMQg5:last-child
     margin-right: -20px
 
-    div:first-child:not([class])
+    & > div:first-child:not([class])
       display: flex
-
-  [href='https://support.discordapp.com']
-    display: none
 
 
 .channelName-3stJzi, .groupDM-3qU0Ks .channelName-3stJzi, .groupDMManaged-1GyXtq .channelName-3stJzi, .input-autosize-input, .input-autosize-input:focus
@@ -55,6 +52,7 @@
     border-left-color: $theme-light-outline
 
 .iconMargin-2YXk4F
+  display: block
   height: 48px
   width: 48px
   margin: 0
@@ -87,6 +85,9 @@
 
   g, path
     display: none
+
+  &[name='QuestionMark']
+    fd-iconbg: 'help_white'
 
   &[name='NotificationBell']
     fd-iconbg: 'notification-side_white'
